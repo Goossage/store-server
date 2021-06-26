@@ -4,7 +4,8 @@ from django.shortcuts import render
 
 def index(request):
     context = {
-        'title':'Store'
+        'title': 'Store',
+        'username': 'Валерий П.'
     }
     return render(request, 'products/index.html', context)
 
@@ -18,6 +19,7 @@ def products(request):
                 {'name': 'Черный рюкзак Nike Heritage', 'price': '2 340,00', 'description': 'Плотная ткань. Легкий материал.', 'buy': False, 'img': "/static/vendor/img/products/Black-Nike-Heritage-backpack.png"},
                 {'name': 'Черные туфли на платформе с 3 парами люверсов Dr Martens 1461 Bex', 'price': '13 590,00', 'description': 'Гладкий кожаный верх. Натуральный материал.', 'buy': False, 'img': "/static/vendor/img/products/Black-Dr-Martens-shoes.png"},
                 {'name': 'Темно-синие широкие строгие брюки ASOS DESIGN', 'price': '2 890,00', 'description': 'Легкая эластичная ткань сирсакер Фактурная ткань.', 'buy': False, 'img': "/static/vendor/img/products/Dark-blue-wide-leg-ASOs-DESIGN-trousers.png"},
-                    ]
+                    ],
+        'username': 'Валерий П.'
     }
     return render(request, 'products/products.html', context)
